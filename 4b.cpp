@@ -32,7 +32,7 @@ void data::join(char* a, char* b)
         {
             resStr[j+14]=b[j];
         }
-        resStr[33]='\0';
+        resStr[32]='\0';
     }
 void data::displayString()
     {
