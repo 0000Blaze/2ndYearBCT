@@ -1,4 +1,4 @@
-//use of overloading operator of pre and post increment operators , since the syntax of pre and post increment operator is samme ,one everloaded function is enough for post and pre increment overloading
+//use of overloading operator of pre and post increment operators
 //assumption of all month having 30 except february is done to make code simple
 #include <iostream>
 
