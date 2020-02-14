@@ -1,0 +1,158 @@
+Lab Sheet 3
+
+Concept of Objects and Classes
+
+Objects
+
+Object consists of the data and the functions that operate on the data. Object data is usually private: no functions other than those within the same object can access it. On the other hand, the functions within the object are usually public. They can be accessed by the other functions in the program including the functions in the other objects. So the function in one object can access the data in the other object through the function of that object.
+
+Classes
+In oops. Objects are variables of classes. It is a specification for any number of objects based on that class. Class itself is a template (data type) for objects. When we actually define the object, of a class we are requesting to allocate memory for that object to hold its data.
+
+Comments in C++
+
+In C++, a new symbol for comment '//' (double slash) is introduced and is called one-line comment.
+
+ 
+
+// this is an example of comment illustration
+
+stdno=48;     //no of student in 059/bct batch
+
+ 
+
+C comment symbols '/*' and '*/' are also valid and can be used for multi-line comments.
+
+ 
+
+/*this is an example illustrating the multi-line
+
+       comment in C++ */
+
+ 
+
+Output Statement
+
+The statement
+
+ 
+
+cout << "This is the first lab in C++";
+
+cause the string "This is the first lab in C++" to be displayed on the screen. Here cout is the predefined object that represents the standard output stream in C++.
+
+The operator '<<', insertion operator, has a simple interface, i.e it is not necessary to specify the data type of the variable on its right. The insertion operator automatically works with any type of the variable. Another advantage of this is that user-defined data types can also be used with this operator, which is not possible with printf( ) function.
+
+ 
+
+Input Statement
+
+The following statement reads the value from the keyboard and places it in a variable size.
+
+cin >> size;
+
+cin identifier represents the standard input device. The >> operator (extraction operator) takes the input from the device. The function is smart enough to interpret the input according to the data type of the variable that holds the value. If size is an integer and the user types "25", the integer value 25 will be placed in size. If the size is a string, the string "25" will be placed in it.
+
+Data Member
+
+The data items within a class are called data members. There can be any number of data members in a class. Normally, data members follow the keyword private, so they can be accessed from within the class but not from outside. That is why we say that oops have feature of data hiding. So, it is safe from accidental alteration.
+
+class demo
+
+{
+
+   private:
+
+       int rollno;                          //member data
+
+       float score;                       //member data
+
+   public:
+
+       setdata( int rl, float sc)   //member function
+
+       {rollno=rl; score=sc;}
+
+       setdata( )
+
+       {
+
+          cout<<"Enter the roll no: \n";
+
+          cin>>rollno;
+
+          cout<<"Score: \n";
+
+          cin>>score;
+
+       }
+
+       showdata( )                 //member function
+
+       {
+
+          cout<<"\Roll No:  " <<rollno<<"has scored "<<score<<endl;
+
+       }
+
+};
+
+above class contains two data items: rollno and score. Here rollno is of type int and score is of type float.
+
+ 
+
+Member Function
+
+Member functions are functions that are included within a class. In above example there are two member functions in class demo: setdata( ) and showdata( ). Each function can have one or more statements. The functions setdata( ) and showdata( ) follow the keyword public which means that they can be accessed from outside the class. It is also possible to declare a function within a class and define it elsewhere.
+
+The class demo can be used as follows
+
+int main()
+
+{
+
+demo d1,d3;
+
+d1.setdata(12,10.4);
+
+d3.setdata( );
+
+d1.showdata( );
+
+d3.showdata( );
+
+return 0;
+
+}
+
+Defining the Objects
+Here the d1 and d3 are defined as objects of class demo. Defining the object is similar to defining a variable of any data type. Space is set-aside for it. Defining the object is creating them i.e instance of the class is created. In general objects in the programs represent physical objects: things that can be felt or seen, for example circle, person, car etc
+
+Calling Member Functions
+Member functions are called as follows
+
+d1.setdata(12,10.4);
+
+d3.setdata( );
+
+d1.showdata( );
+
+d3.showdata( );
+
+This syntax is used to call a member function that is associated with a specific object. Because of the demo class, it must always be called in connection with an object of this class. Here the first member function is called by passing the values while the second is called without passing any value.
+
+ Exercises
+1.Write a simple program that convert the temperature in degree Celsius to degree Fahrenheit and vice versa using the basic concept of class and object. Make separate class for Centigrade and Fahrenheit which will have the private member to hold the temperature value and make conversion functions in each class for conversion from one to other. For example you will have function toFahrenheit() in class Celsius that converts to Fahrenheit scale and returns the value.
+
+2.Assume that you want to check whether the number is prime or not. Write a program that asks for a number repeatedly. When it finishes the calculation the program asks if the user wants to do another calculation. The response can be 'y' or 'n'. Don't forget to use the object class concept.
+
+3.Create a class called carpark that has int data member for car id, int data member for charge/hour and float data member for time. Set the data and show the charges and parked hours of corresponding car id. Make two member functions for setting and showing the data. Member function should be called from other functions.
+
+4.Write a program with classes to represent circle, rectangle and triangle. Each classes should have data members to represent the actual objects and member functions to read and display objects, find perimeter and area of the objects and other useful functions. Use the classes to create objects in your program.
+
+5.Assume that an object represents an employee report that contains the information like employee id, total bonus, total overtime in a particular year. Use array of objects to represent n employees' reports. Write a program that displays report. Use setpara() member function to set report attributes by passing the arguments and member function displayreport() to show the reports according to parameter passed. Display the report in following format.
+Employee with ... ... ... has received Rs ... ... ...as bonus
+
+and
+
+had worked ... ... ... hours as a over time in  year ... ... ...
