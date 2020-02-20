@@ -1,2 +1,1 @@
-# 2ndYear
-codes of laboratory of Object Oriented Programming(C++) of DSB sir
+#codes of lab of Object Oriented Programming(C++) of DSB sir
